@@ -89,7 +89,9 @@ def main() -> None:
     parser.add_argument("--model", default="gpt-4o-mini", help="модель OpenAI")
     args = parser.parse_args()
 
-    project_root = Path(__file__).resolve().parents[3]
+    # segmentation.py находится в <project>/src/hack_e9062c20_hack/.
+    # Поэтому .env и messages.txt лежат на два уровня выше каталога пакета.
+    project_root = Path(__file__).resolve().parents[2]
     messages_path = args.messages or project_root / "messages.txt"
     if not messages_path.is_absolute():
         messages_path = Path.cwd() / messages_path

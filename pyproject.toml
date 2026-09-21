@@ -1,0 +1,21 @@
+[project]
+name = "hack-e9062c20-hack"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Nurlan Abzalbekov", email = "nabzalbekov0@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "openai>=3.16.2",
+    "pydantic>=2.13.5",
+    "pydantic-settings>=2.15.0",
+]
+
+[project.scripts]
+hack-e9062c20-hack = "hack_e9062c20_hack:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
